@@ -13,7 +13,11 @@ public class RecursionPractice {
 
 
 	public static int squareNumber(int n) {
-		return 0;
+		if(n==1) {
+			return n;
+		}else {
+			return squareNumber(n-1) + 2*n -1;
+		}
 	}
 
 
@@ -39,6 +43,10 @@ public class RecursionPractice {
 		int n = 5;
 		int test = factorial(n);
 		System.out.println(n + " factorial is " + test);
+		
+		int n1 = 10;
+		int test1 = squareNumber(n1);
+		System.out.println(n1 + " squared is " + test1);
 	}
 
 
