@@ -1,6 +1,7 @@
 public class RecursionPractice {
 
-
+	private static long iterations = 0;
+	
 	public static int factorial (int n) {
 		if(n == 1) {
 			return n;
@@ -38,6 +39,7 @@ public class RecursionPractice {
 		} 
 	}
 
+	
 	public static int pentagonalNumber(int n) {
 		return 0;
 	}
@@ -53,6 +55,7 @@ public class RecursionPractice {
 		
 	}
 
+	
 	public static int findPyramid(int n) {
 		if(n == 0) {
 			return 0;
@@ -62,6 +65,7 @@ public class RecursionPractice {
 			return current;
 		}
 	}
+	
 	
 	public static int findFibonacci(int n) {
 		if(n == 0) {
@@ -73,17 +77,24 @@ public class RecursionPractice {
 		}
 	}
 	
+	
 	public static int findFibonacci2(int n) {
 		if(n == 0) {
 			return 0;
 		}else {
-			int num = 0;
-			for(int a = 0; a <= n; a++) {
-				
+			int next = 0;
+			int previous = 0;
+			int current = 1;
+			for(int a = 0; a < n-1; a++) {
+				next = current + previous;
+				previous =  current;
+				current = next;
 			}
+			return current;
 		}
 	}
 
+	
 	public static void main(String[] args) {
 		int n = 5;
 		int test = factorial(n);
@@ -93,8 +104,8 @@ public class RecursionPractice {
 		int test1 = squareNumber(n1);
 		System.out.println(n1 + " squared is " + test1);
 		
-		int n2 = 5;
-		int test2 = findFibonacci(n2);
+		int n2 = 2;
+		int test2 = findFibonacci2(n2);
 		System.out.println(n2 + " fibo is " + test2);
 	}
 
