@@ -68,11 +68,10 @@ public class RecursionPractice {
 	
 	
 	public static int findFibonacci(int n) {
-		if(n == 0) {
-			return 0;
-		}else if(n == 1) {
-			return 1;
+		if(n <= 1) {
+			return n;
 		}else {
+			iterations++;
 			return findFibonacci(n-1) + findFibonacci(n-2);
 		}
 	}
@@ -89,6 +88,7 @@ public class RecursionPractice {
 				next = current + previous;
 				previous =  current;
 				current = next;
+				iterations++;
 			}
 			return current;
 		}
@@ -114,10 +114,10 @@ public class RecursionPractice {
 		//	iterations = 0;
 			
 			long start = System.nanoTime();
-			int test = findFibonacci(a);
+			int test = findFibonacci2(a);
 			long end = System.nanoTime();
 			
-			System.out.println(a + " fibo number is " + test + ", took " + (end-start) + " nanosec, ");
+			System.out.println(a + " fibo number is " + test + ", took " + (end-start) + " nanosec, " + iterations + " iterations.");
 		}
 	}
 
