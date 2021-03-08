@@ -96,6 +96,7 @@ public class RecursionPractice {
 
 	
 	public static void main(String[] args) {
+		/*
 		int n = 5;
 		int test = factorial(n);
 		System.out.println(n + " factorial is " + test);
@@ -104,9 +105,20 @@ public class RecursionPractice {
 		int test1 = squareNumber(n1);
 		System.out.println(n1 + " squared is " + test1);
 		
-		int n2 = 2;
+		int n2 = 5;
 		int test2 = findFibonacci2(n2);
 		System.out.println(n2 + " fibo is " + test2);
+		*/
+		
+		for (int a = 5; a <= 45; a += 5) {
+		//	iterations = 0;
+			
+			long start = System.nanoTime();
+			int test = findFibonacci(a);
+			long end = System.nanoTime();
+			
+			System.out.println(a + " fibo number is " + test + ", took " + (end-start) + " nanosec, ");
+		}
 	}
 
 
