@@ -66,8 +66,21 @@ public class RecursionPractice {
 	public static int findFibonacci(int n) {
 		if(n == 0) {
 			return 0;
+		}else if(n == 1) {
+			return 1;
 		}else {
-			return 
+			return findFibonacci(n-1) + findFibonacci(n-2);
+		}
+	}
+	
+	public static int findFibonacci2(int n) {
+		if(n == 0) {
+			return 0;
+		}else {
+			int num = 0;
+			for(int a = 0; a <= n; a++) {
+				
+			}
 		}
 	}
 
@@ -79,6 +92,10 @@ public class RecursionPractice {
 		int n1 = 10;
 		int test1 = squareNumber(n1);
 		System.out.println(n1 + " squared is " + test1);
+		
+		int n2 = 5;
+		int test2 = findFibonacci(n2);
+		System.out.println(n2 + " fibo is " + test2);
 	}
 
 
