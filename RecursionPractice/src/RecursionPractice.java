@@ -23,22 +23,18 @@ public class RecursionPractice {
 
 	public static int logBase2(int n) {
 		if(n == 1) {
-			return 0;
-		}else if(){
-			
+			return n;
 		}else {
-			
+			return 1 + logBase2(n/2);
 		}
 	}
 
 
 	public static int pow(int n) {
 		if(n == 0) {
-			return 1;
-		}else if() {
-			
+			return n;
 		}else {
-			
+			return 2*pow(n-1);
 		} 
 	}
 
@@ -58,11 +54,21 @@ public class RecursionPractice {
 	}
 
 	public static int findPyramid(int n) {
-		
+		if(n == 0) {
+			return 0;
+		}else {
+			int prev = findPyramid(n-1);
+			int current = prev + n;
+			return current;
+		}
 	}
 	
 	public static int findFibonacci(int n) {
-		
+		if(n == 0) {
+			return 0;
+		}else {
+			return 
+		}
 	}
 
 	public static void main(String[] args) {
