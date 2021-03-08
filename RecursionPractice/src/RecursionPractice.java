@@ -114,7 +114,7 @@ public class RecursionPractice {
 		//	iterations = 0;
 			
 			long start = System.nanoTime();
-			int test = findFibonacci2(a);
+			int test = findFibonacci(a);
 			long end = System.nanoTime();
 			
 			System.out.println(a + " fibo number is " + test + ", took " + (end-start) + " nanosec, " + iterations + " iterations.");
