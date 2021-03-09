@@ -39,10 +39,6 @@ public class RecursionPractice {
 		} 
 	}
 
-	
-	public static int pentagonalNumber(int n) {
-		return 0;
-	}
 
 	public static int findTriangle(int n) {
 		if(n == 0) {
